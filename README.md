@@ -66,16 +66,16 @@ $ res GET http://example.com -i
 Send request data to the body
 ```
 $ res POST http://example.com -d "{
-					'Hello':'World',
-					'REST':'API'
+						'Hello':'World',
+						'REST':'API'
 				}"
 ```
 
 Authorization
 ```
 $ res POST http://example.com -a "{
-					'user':'jawerty',
-					'password':'noneofyourbusiness'
+						'user':'jawerty',
+						'password':'noneofyourbusiness'
 				}"
 ```
 
