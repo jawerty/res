@@ -66,24 +66,22 @@ $ res GET http://example.com -i
 Send request data to the body
 ```
 $ res POST http://example.com -d "{
-									'Hello':'World',
-									'REST':'API'
-								}"
+						'Hello':'World',
+						'REST':'API'
+					}"
 ```
 
 Authorization
 ```
 $ res POST http://example.com -a "{
-									'user':'jawerty',
-									'password':'noneofyourbusiness'
-								}"
+						'user':'jawerty',
+						'password':'noneofyourbusiness'
+					}"
 ```
 
 Parameters
 ```
-$ res POST http://example.com -p "{
-									'q':'names'
-								}"
+$ res POST http://example.com -p "{ 'q':'names' } "
 ```
 
 There are many more HTTP options to use with res. Run the command at `$ res -h` to see all of the functions res wraps around.
