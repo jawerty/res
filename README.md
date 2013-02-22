@@ -1,5 +1,5 @@
 # res
-A tiny command-line REST client. Easily interact with REST APIs at a faster speed within your terminal. Built on top of the requests library and meant to be a command line wrapper for requests. 
+A tiny command-line HTTP client. Easily interact with REST APIs at a faster speed within your terminal. Built on top of the requests library and meant to be a command line wrapper for requests. 
 
 Current version: v0.1.0
 
