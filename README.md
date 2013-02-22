@@ -26,12 +26,12 @@ Options:
 # Install
 To download and install res, you must follow the instructions below.
 
-## Install via PIP
+### Install via PIP
 ```
 $ pip install res
 ```
 
-## Install via setup.py
+### Install via setup.py
 First you need to get a copy of the source. I'm going to use git and clone it to my local machine. 
 
 Clone the repository into a folder
