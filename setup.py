@@ -3,7 +3,7 @@
 from setuptools import setup
 
 setup(name='res',
-      version='0.1.0',
+      version='0.1.1',
       description='res is a tiny command line REST client',
       author='Jared Wright',
       license='MIT',
