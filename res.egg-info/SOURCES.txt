@@ -1,0 +1,10 @@
+MANIFEST.in
+colors.py
+res.py
+setup.py
+res.egg-info/PKG-INFO
+res.egg-info/SOURCES.txt
+res.egg-info/dependency_links.txt
+res.egg-info/entry_points.txt
+res.egg-info/requires.txt
+res.egg-info/top_level.txt

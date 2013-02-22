@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: res
+Version: 0.1.0
+Summary: res is a tiny command line REST client
+Home-page: http://github.com/jawerty/res
+Author: Jared Wright
+Author-email: jawerty210@gmail.com
+License: MIT
+Description: UNKNOWN
+Keywords: res rest client command line tool cli minimalistic API http calls
+Platform: UNKNOWN
