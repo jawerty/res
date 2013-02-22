@@ -6,7 +6,7 @@ REST it up with python. Use res to make command line http calls.
 Usage:
   res (-h | --help)
   res (-v | --version)
-  res <method> <url> [options] [<args>...]
+  res <method> <url> [options]
 
 Options:
   -d --data=<data>          Send request data
