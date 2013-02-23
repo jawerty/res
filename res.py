@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """res
-REST it up with python. Use res to make command line http calls.
+HTTP it up with python. Use res to make command line http calls.
 
 Usage:
   res (-h | --help)
