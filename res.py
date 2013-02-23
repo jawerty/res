@@ -11,10 +11,11 @@ Usage:
 Options:
   -d --data=<data>          Send request data
   -H --HEADER=<header>      Defines custom headers
-  -a --auth=<auth>          Authenticaton
+  -a --auth=<auth>          Authenticaton with 'user' and 'password' keys
   -p --params=<params>      Send request parameters
   -b --bytes                Returns content response in bytes
   -c --cookie=<cookie>      Defines cookies
+  -x --proxy=<proxy>        Sends proxy with protocal as key and the port as value
   -i --include              Include headers
   -h --help                 Show this screen.
   -v --version              Show version.
@@ -53,6 +54,11 @@ def headers(args, url):
 		print page.info()
 
 def rest(args, method, url, bytes):
+	if args['--proxy'] != None:
+		proxy = parse_dict(args['--proxy'])
+	else:
+		proxy = None
+
 	if args['--cookie'] != None:
 		cookies = parse_dict(args['--cookie'])
 	else:
@@ -95,7 +101,8 @@ def rest(args, method, url, bytes):
 		data=data, 
 		headers=headers, 
 		auth=auth,
-		cookies=cookies
+		cookies=cookies,
+		proxies=proxy
 	)
 	
 	if bytes == True:
