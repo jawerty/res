@@ -81,7 +81,7 @@ $ res POST http://example.com -a "{
 
 Parameters
 ```
-$ res POST http://example.com -p "{ 'q':'names' } "
+$ res POST http://example.com -p "{ 'q':'names' }"
 ```
 
 There are many more HTTP options to use with res. Run the command at `$ res -h` to see all of the functions res wraps around.
