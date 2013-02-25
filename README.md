@@ -1,7 +1,7 @@
 # res
 A tiny command-line HTTP client. Easily interact with HTTP calls at a faster speed within your terminal. Built on top of the requests library and meant to be a command line wrapper for requests. 
 
-Current version: v0.1.0
+Current version: v0.1.4
 
 ```
 REST it up with python. Use res to make command line http calls.
