@@ -6,7 +6,8 @@ Current version: v0.1.6
 ```
 res v0.1.6
 
-HTTP it up with python. Use res to make command line http calls. I made this to make the development of my REST API to be a little bit easier.
+HTTP it up with python. Use res to make command line http calls. I made this to make
+the development of my REST API to be a little bit easier.
 
 Usage:
   res (-h | --help)
