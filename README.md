@@ -100,6 +100,7 @@ or
 $ res GET http://example.com --bytes
 ```
 
+
 Raw socket response -> raw
 ```
 $ res GET http://example.com -r
@@ -108,6 +109,7 @@ or
 ```
 $ res GET http://example.com --raw
 ```
+
 
 JSON response decoder -> json
 ```
