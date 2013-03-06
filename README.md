@@ -1,10 +1,12 @@
 # res
 A tiny command-line HTTP client. Easily interact with HTTP calls at a faster speed within your terminal. Built on top of the requests library and meant to be a command line wrapper for requests. 
 
-Current version: v0.1.4
+Current version: v0.1.6
 
 ```
-REST it up with python. Use res to make command line http calls.
+res v0.1.6
+
+HTTP it up with python. Use res to make command line http calls. I made this to make the development of my REST API to be a little bit easier.
 
 Usage:
   res (-h | --help)
@@ -14,10 +16,13 @@ Usage:
 Options:
   -d --data=<data>          Send request data
   -H --HEADER=<header>      Defines custom headers
-  -a --auth=<auth>          Authenticaton
+  -a --auth=<auth>          Authenticaton with 'user' and 'password' keys
   -p --params=<params>      Send request parameters
   -b --bytes                Returns content response in bytes
+  -r --raw                  Returns content response in raw format
+  -j --json                 Decodes content response from json
   -c --cookie=<cookie>      Defines cookies
+  -x --proxy=<proxy>        Sends proxy with protocal as key and the port as value
   -i --include              Include headers
   -h --help                 Show this screen.
   -v --version              Show version.
@@ -44,7 +49,6 @@ Install with setup.py
 $ cd res
 $ python setup.py install
 ```
-
 
 # Usage
 Example GET, POST, PUT and DELETE calls
@@ -84,7 +88,36 @@ Parameters
 $ res POST http://example.com -p "{ 'q':'names' }" 
 ```
 
-There are many more HTTP options to use with res. Run the command at `$ res -h` to see all of the functions res wraps around.
+### Change data response content (v0.1.6)
+
+Binary response -> bytes 
+```
+$ res GET http://example.com -b
+```
+or
+```
+$ res GET http://example.com --bytes
+```
+
+Raw socket response -> raw
+```
+$ res GET http://example.com -r
+```
+or
+```
+$ res GET http://example.com --raw
+```
+
+JSON response decoder -> json
+```
+$ res GET http://example.com -j
+```
+or
+```
+$ res GET http://example.com --json
+```
+
+There are even more HTTP options that are compatible with res. Run the command at `$ res -h` to see all of the functions res wraps around.
 
 # Contact
 If you would like to contact me for further information on the project, see the info below.

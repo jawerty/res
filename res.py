@@ -1,7 +1,9 @@
 #!/usr/bin/env python
 
-"""res
-HTTP it up with python. Use res to make command line http calls.
+"""
+res v0.1.6
+
+HTTP it up with python. Use res to make command line http calls. I made this to make the development of my REST API to be a little bit easier.
 
 Usage:
   res (-h | --help)
@@ -14,6 +16,8 @@ Options:
   -a --auth=<auth>          Authenticaton with 'user' and 'password' keys
   -p --params=<params>      Send request parameters
   -b --bytes                Returns content response in bytes
+  -r --raw                  Returns content response in raw format
+  -j --json                 Decodes content response from json
   -c --cookie=<cookie>      Defines cookies
   -x --proxy=<proxy>        Sends proxy with protocal as key and the port as value
   -i --include              Include headers
@@ -34,6 +38,24 @@ from requests.auth import HTTPBasicAuth
 try: import json
 except ImportError: import simplejson
 
+def parse_options(args):
+	if args['--raw'] == True:
+		raw = True
+	else:
+		raw = False	
+
+	if args['--bytes'] == True:
+		bytes = True
+	else:
+		bytes = False
+
+	if args['--json'] == True:
+		json = True
+	else:
+		json = False
+
+	return raw, bytes, json
+
 def parse_dict(dictionary):
 	try:
 		return ast.literal_eval(dictionary)
@@ -41,19 +63,12 @@ def parse_dict(dictionary):
 		colors.print_error("res error in ***"+dictionary+"***: " + str(e))
 		return None
 
-def get_bytes(args):
-	if args['--bytes'] == True:
-		bytes = True
-	else:
-		bytes = False
-	return bytes
-
 def headers(args, url):
 	if args['--include'] == True:
 		page = urllib2.urlopen(url)
 		print page.info()
 
-def rest(args, method, url, bytes):
+def rest(args, method, url, bytes, raw, json):
 	if args['--proxy'] != None:
 		proxy = parse_dict(args['--proxy'])
 	else:
@@ -102,11 +117,19 @@ def rest(args, method, url, bytes):
 		headers=headers, 
 		auth=auth,
 		cookies=cookies,
-		proxies=proxy
+		proxies=proxy,
+		stream=raw
 	)
 	
 	if bytes == True:
 		print r.content
+	elif raw == True:
+		print r.raw
+	elif json == True:
+		try:
+			print r.json()
+		except ValueError, e:
+			colors.print_error('res error: ' + str(e))  
 	else:
 		print r.text
 
@@ -119,9 +142,10 @@ def main():
 	if any(args['<method>'] == val for val in allowed_methods):
 		url = args['<url>']
 		headers(args, url)
-		bytes = get_bytes(args)
+		raw, bytes, json = parse_options(args)
 
-		rest(args, args['<method>'], url, bytes)
+		rest(args, args['<method>'], url, bytes, raw, json)
+
 	else:
 		colors.print_error('res error: <method> not valid')
 	#########################
