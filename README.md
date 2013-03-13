@@ -1,10 +1,10 @@
 # res
 A tiny command-line HTTP client. Easily interact with HTTP calls at a faster speed within your terminal. Built on top of the requests library and meant to be a command line wrapper for requests. 
 
-Current version: v0.1.6
+Current version: v0.1.7
 
 ```
-res v0.1.6
+res v0.1.7
 
 HTTP it up with python. Use res to make command line http calls. I made this to make
 the development of my REST API to be a little bit easier.
@@ -89,7 +89,7 @@ Parameters
 $ res POST http://example.com -p "{ 'q':'names' }" 
 ```
 
-### Change data response content (v0.1.6)
+### Change data response content (new in v0.1.7)
 
 Binary response -> bytes 
 ```
@@ -118,6 +118,17 @@ $ res GET http://example.com -j
 or
 ```
 $ res GET http://example.com --json
+```
+
+### Interactive Console
+The interactive console current (v0.1.7) cannot pass any arguments that require dictionaries (i.e. --data, --proxy, --cookie, etc.). However, arguments like --bytes, --encoding, --raw, etc., are allowed.
+```
+$ res console
+>>> get http://example.com -e `// -e is for encoding`
+UTF-8
+>>> get http://example.com
+`response content....`
+>>>
 ```
 
 There are even more HTTP options that are compatible with res. Run the command at `$ res -h` to see all of the functions res wraps around.
