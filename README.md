@@ -6,10 +6,10 @@ Current version: v0.1.7
 ```
 res v0.1.7
 
-HTTP it up with python. Use res to make command line http calls. I made this to make
-the development of my REST API to be a little bit easier.
+HTTP it up with python. Use res to make command line http calls. I made this to make the development of my REST API to be a little bit easier.
 
 Usage:
+  res console
   res (-h | --help)
   res (-v | --version)
   res <method> <url> [options]
@@ -24,6 +24,7 @@ Options:
   -j --json                 Decodes content response from json
   -c --cookie=<cookie>      Defines cookies
   -x --proxy=<proxy>        Sends proxy with protocal as key and the port as value
+  -e --encoding             Return encoding of content
   -i --include              Include headers
   -h --help                 Show this screen.
   -v --version              Show version.
@@ -89,7 +90,7 @@ Parameters
 $ res POST http://example.com -p "{ 'q':'names' }" 
 ```
 
-### Change data response content (new in v0.1.7)
+### Change data response content (new in v0.1.6)
 
 Binary response -> bytes 
 ```
