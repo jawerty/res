@@ -143,4 +143,4 @@ Github: jawerty
 
 Twitter: @jawerty
 
-Blog: <http://wrightdev.herokuapp.com>
+Website/Blog: <http://wrightdev.herokuapp.com>
