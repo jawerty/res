@@ -3,7 +3,7 @@
 """
 res v0.1.7
 
-HTTP it up with python. Use res to make command line http calls. I made this to make the development of my REST API to be a little bit easier.
+Make HTTP easy. Use res to make command line http calls. I made this to make the development of my REST API to be a little bit easier.
 
 Usage:
   res console
