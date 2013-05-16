@@ -155,7 +155,7 @@ def run(args, allowed_methods, cmd=None):
 
 def main():
 	allowed_methods = ['POST', 'GET', 'DELETE', 'PUT', 'post', 'get', 'delete', 'put']
-	args = docopt(__doc__, argv=sys.argv[1:], help=True, version='res v0.1.7', options_first=False)
+	args = docopt(__doc__, argv=sys.argv[1:], help=True, version='res v0.1.8', options_first=False)
 
 	#########Run in interactive shell#########
 	if args['console'] == True:
@@ -184,7 +184,6 @@ def main():
 				args['--encoding'] = True
 			else:
 				args['--encoding'] = False
-
 
 			if cmd[0]:
 				args['<method>'] = cmd[0] 

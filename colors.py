@@ -13,3 +13,6 @@ def print_header(text):
 	
 def print_error(text):
 	print FAIL+text+ENDC
+
+def print_green(text):
+	print OKGREEN+text+ENDC
