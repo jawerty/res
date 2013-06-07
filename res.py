@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 """
-res v0.1.7
+res v0.1.8
 
 Make HTTP easy. Use res to make command line http calls. I made this to make the development of my REST API to be a little bit easier.
 
@@ -155,7 +155,7 @@ def run(args, allowed_methods, cmd=None):
 
 def main():
 	allowed_methods = ['POST', 'GET', 'DELETE', 'PUT', 'post', 'get', 'delete', 'put']
-	args = docopt(__doc__, argv=sys.argv[1:], help=True, version='res v0.1.8', options_first=False)
+	args = docopt(__doc__, argv=sys.argv[1:], help=True, version='v0.1.8', options_first=False)
 
 	#########Run in interactive shell#########
 	if args['console'] == True:
