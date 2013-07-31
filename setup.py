@@ -2,6 +2,7 @@
 
 from setuptools import setup
 
+#basic setup for a python binary
 setup(name='res',
       version='0.1.8',
       description='res is a tiny command line HTTP client',
